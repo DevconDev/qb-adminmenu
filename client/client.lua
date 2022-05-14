@@ -5,21 +5,21 @@ local banreason = 'Unknown'
 local kickreason = 'Unknown'
 local menuLocation = 'topright' -- e.g. topright (default), topleft, bottomright, bottomleft
 
-local menu = MenuV:CreateMenu(false, Lang:t("menu.admin_menu"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test')
-local menu2 = MenuV:CreateMenu(false, Lang:t("menu.admin_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test1')
-local menu4 = MenuV:CreateMenu(false, Lang:t("menu.online_players"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test3')
-local menu5 = MenuV:CreateMenu(false, Lang:t("menu.manage_server"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test4')
-local menu6 = MenuV:CreateMenu(false, Lang:t("menu.weather_conditions"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test5')
-local menu7 = MenuV:CreateMenu(false, Lang:t("menu.dealer_list"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test6')
-local menu8 = MenuV:CreateMenu(false, Lang:t("menu.ban"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test7')
-local menu9 = MenuV:CreateMenu(false, Lang:t("menu.kick"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test8')
-local menu10 = MenuV:CreateMenu(false, Lang:t("menu.permissions"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test9')
-local menu11 = MenuV:CreateMenu(false, Lang:t("menu.developer_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test10')
-local menu12 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test11')
-local menu13 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_categories"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test12')
-local menu14 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_models"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test13')
-local menu15 = MenuV:CreateMenu(false, Lang:t("menu.entity_view_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test15')
-local menu16 = MenuV:CreateMenu(false, Lang:t("menu.spawn_weapons"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test16')
+local menu = MenuV:CreateMenu(false, Lang:t("menu.admin_menu"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test')
+local menu2 = MenuV:CreateMenu(false, Lang:t("menu.admin_options"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test1')
+local menu4 = MenuV:CreateMenu(false, Lang:t("menu.online_players"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test3')
+local menu5 = MenuV:CreateMenu(false, Lang:t("menu.manage_server"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test4')
+local menu6 = MenuV:CreateMenu(false, Lang:t("menu.weather_conditions"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test5')
+local menu7 = MenuV:CreateMenu(false, Lang:t("menu.dealer_list"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test6')
+local menu8 = MenuV:CreateMenu(false, Lang:t("menu.ban"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test7')
+local menu9 = MenuV:CreateMenu(false, Lang:t("menu.kick"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test8')
+local menu10 = MenuV:CreateMenu(false, Lang:t("menu.permissions"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test9')
+local menu11 = MenuV:CreateMenu(false, Lang:t("menu.developer_options"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test10')
+local menu12 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_options"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test11')
+local menu13 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_categories"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test12')
+local menu14 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_models"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test13')
+local menu15 = MenuV:CreateMenu(false, Lang:t("menu.entity_view_options"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test15')
+local menu16 = MenuV:CreateMenu(false, Lang:t("menu.spawn_weapons"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv', 'test16')
 
 RegisterNetEvent('qb-admin:client:openMenu', function()
     MenuV:OpenMenu(menu)
@@ -750,7 +750,7 @@ end
 -- Dealer List
 
 local function OpenDealerMenu(dealer)
-    local EditDealer = MenuV:CreateMenu(false, Lang:t("menu.edit_dealer") .. dealer["name"], menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv')
+    local EditDealer = MenuV:CreateMenu(false, Lang:t("menu.edit_dealer") .. dealer["name"], menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv')
     EditDealer:ClearItems()
     MenuV:OpenMenu(EditDealer)
     local elements = {
@@ -1014,7 +1014,7 @@ local function OpenBanMenu(banplayer)
 end
 
 local function OpenPlayerMenus(player)
-    local Players = MenuV:CreateMenu(false, player.cid .. Lang:t("info.options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv') -- Players Sub Menu
+    local Players = MenuV:CreateMenu(false, player.cid .. Lang:t("info.options"), menuLocation, 2, 114, 110, 'size-125', 'none', 'menuv') -- Players Sub Menu
     Players:ClearItems()
     MenuV:OpenMenu(Players)
     local elements = {
