@@ -423,7 +423,7 @@ menu2_admin_god_mode:On('change', function(_, _, _)
     end
 end)
 
-<<<<<<< HEAD
+
 -- Weapons list
 for _,v in pairs(QBCore.Shared.Weapons) do
     menu15:AddButton({icon = '🎁',
